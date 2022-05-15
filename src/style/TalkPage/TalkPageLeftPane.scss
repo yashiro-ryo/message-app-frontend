@@ -1,0 +1,39 @@
+.talk-page-left-pane {
+  width: 30%;
+  height: calc(100vh - 50px);
+  border-right: solid 2px #636363;
+  overflow: scroll;
+
+  .talk-left-pane-header {
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .talk-left-pane-body {
+    width: 100%;
+    .talk-room {
+      height: 50px;
+      width: 100%;
+      border: 0.5px solid #636363;
+      &:hover {
+        background: #c7c7c7;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .create-talk-modal{
+    .users {
+      .user-name{
+        .btn-user-name{
+          display: block;
+          height: 20px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}

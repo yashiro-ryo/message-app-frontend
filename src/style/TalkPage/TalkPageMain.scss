@@ -1,0 +1,37 @@
+.talk-page-main-pane {
+  width: 70%;
+  height: 100%;
+
+  .talk-name {
+    height: 40px;
+    border-bottom: 1px solid #636363;
+    line-height: 40px;
+  }
+
+  .message-body {
+    border-bottom: 1px solid #636363;
+    height: calc((100vh - 56px) - 90px);
+    overflow: scroll;
+  }
+
+  .message-footer {
+    height: 50px;
+    background-color: #f6f6f6;
+
+    .form {
+      .input-field {
+        width: 80%;
+        height: 30px;
+        margin: 10px;
+      }
+
+      .submit-btn {
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.empty-view{
+  text-align: center;
+}

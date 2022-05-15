@@ -1,0 +1,24 @@
+.container {
+  margin-top: 20px;
+
+  .user-name{
+    border: 1px solid #b8b8b8;
+    height: 50px;
+    width: 100%;
+    &:hover {
+      background-color: #b8b8b8;
+    }
+
+    .text-field{
+      width: 100%;
+    }
+  }
+
+  .btn-add-address{
+    width: 200px;
+  }
+
+  .btn-update-users{
+    width: 200px;
+  }
+}

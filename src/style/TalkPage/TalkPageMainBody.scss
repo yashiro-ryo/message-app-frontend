@@ -1,0 +1,22 @@
+.msg-container {
+  width: 100%;
+  display: flex;
+
+  .msg-wrapper {
+    max-width: 200px;
+    margin: 5px;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .is-me {
+    background-color: #008995;
+    width: 200px;
+  }
+
+  .is-you {
+    background-color: #ebeff2;
+    width: 200px;
+  }
+}
