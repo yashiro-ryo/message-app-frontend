@@ -21,6 +21,7 @@ function TalkPageLeftPane() {
     // update dom
     setTalkroom(talkrooms);
     Log.v("update-talkrooms");
+    console.log(talkroom)
   });
 
   // methods
@@ -32,7 +33,7 @@ function TalkPageLeftPane() {
 
   const showTalkPage = (event: React.MouseEvent<HTMLElement>) => {
     const choicedTalkroomId =
-      event.currentTarget.getAttribute("data-talkroomId");
+      event.currentTarget.getAttribute("data-talkroomid");
     setChoicedTalkroomid(Number(choicedTalkroomId));
     Log.v("talkroomId stored :" + getChoicedTalkroomId());
     emitter.emit("get-talk", choicedTalkroomId);
@@ -49,11 +50,11 @@ function TalkPageLeftPane() {
           <button
             className="talkroom-name talk-room"
             onClick={showTalkPage}
-            data-talkroomId={value1.talkroomId}
+            data-talkroomid={value1.talkroom_id}
             key={index}
           >
-            <p>{value1.talkroomName}</p>
-            <p>{value1.talkroomId}</p>
+            <p>{value1.talkroom_name}</p>
+            <p>{value1.talkroom_id}</p>
           </button>
         ))}
       </div>

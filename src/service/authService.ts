@@ -7,16 +7,21 @@ import socketEventListener from "./socketEventListener";
 export class Auth {
   // login and create connection
   login() {
-    const token = localStorage.getItem("token");
-    const id = localStorage.getItem("id");
-    const name = localStorage.getItem("name");
-    if (token && id && name) {
+    const token = localStorage.getItem("message-token");
+    console.log(token)
+    const id = localStorage.getItem("message-id");
+    console.log('id :' + id)
+    const name = localStorage.getItem("message-name");
+    console.log('name :' + name)
+    if (token !== null && id !== null && name !== null) {
+      console.log('sign in with localstrage id password')
       this.createConnection(token, Number(id));
       setToken(token);
       setId(Number(id));
       setName(name);
       Log.v('sucessed login')
     } else {
+      console.log('sign in with login id password')
       // 本番環境ではget login pageを実行
       axios
         .post("/login", {
@@ -24,6 +29,7 @@ export class Auth {
           password: "aiueo",
         })
         .then((response) => {
+          console.log('successful get user info by axios')
           localStorage.setItem("token", response.data.token);
           setToken(response.data.token);
           localStorage.setItem("userId", response.data.id);

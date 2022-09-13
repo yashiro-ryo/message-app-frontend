@@ -1,5 +1,5 @@
 // types
-type Talkroom = { talkroomId: number; talkroomName: string };
+type Talkroom = { talkroom_id: number; talkroom_name: string };
 type Talkrooms = Array<Talkroom>;
 
 // TalkpaneLeft
